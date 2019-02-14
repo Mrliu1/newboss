@@ -1,0 +1,53 @@
+{
+  "entry": "src/index.js",
+  "disableCSSModules": false,
+  "publicPath": "/",
+  "theme": {
+    //  "@primary-color": "#1DA57A",
+    // "@link-color": "#1DA57A",
+    // "@border-radius-base": "2px",
+    // "@font-size-base": "16px",
+    // "@line-height-base": "1.2"
+  },
+  "autoprefixer": null,
+  "proxy": {
+     "/distributeweb": {
+       "target": "https://boss.icarbonx.com/distribute-web/",
+       "changeOrigin": true,
+       "pathRewrite": { "^/api" : "" }
+    }
+   },
+  "extraBabelPlugins": [
+    "transform-runtime",
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": true
+      }
+    ]
+  ],
+  "env": {
+    "development": {
+      "extraBabelPlugins": [
+        "dva-hmr",
+        [
+          "import",
+          {
+            "libraryName": "antd",
+            "style": true
+          }
+        ]
+      ]
+    }
+  },
+  "define": {
+    "_LoginWay": "login",
+    //可选参数[login|both|usbkeyLogin]
+    "_Debug": "everywhereddd",
+    "_PROJECT": "SM",
+    "_NONEEDPASSWORD": true
+  },
+  //输出目标路径
+  "outputPath": "../cgcode_dashboard/webApp/"
+}

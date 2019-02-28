@@ -10,7 +10,7 @@ class TabsMenu extends React.Component {
     super(props);
     this.newTabIndex = 0;
     const panes = [
-      { text: '首页', key: 'https://boss.icarbonx.com/distribute-ui/baseDistribute/channelBilling', id: 'home', closable: false },
+      { text: '首页', key: 'https://blog.csdn.net/weixin_40766882?orderby=ViewCount', id: 'home', closable: false },
     ];
     this.state = {
       activeKey: panes[0].id,
